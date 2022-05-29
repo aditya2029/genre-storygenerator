@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>LyricBot</title>
+        <!--<title>LyricBot</title>-->
+        <title>Genre based Story Generator</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -17,27 +18,30 @@
         <!-- JQUERY -->
         <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}" defer=""></script>
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ url_for('static',filename='/css/styles.css') }}" rel="stylesheet" />
+        <!--<link href="{{ url_for('static',filename='/css/styles.css') }}" rel="stylesheet" />-->
+        <link href="static/css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
+        <!--
         <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
-              <li class="sidebar-brand"><a href={{ url_for('home')}}>LyricBot Project</a></li>
+              <li class="sidebar-brand"><a href={{ url_for('home')}}>Genre based story project</a></li>
               <li class="sidebar-nav-item"><a href={{ url_for('home')}}>Home </a></li>
-              <li class="sidebar-nav-item"><a href={{ url_for('results')}}>Try The Model</a></li>
+              <li class="sidebar-nav-item"><a href={{ url_for('results')}}>Get your story</a></li>
               <li class="sidebar-nav-item"><a href="https://www.github.com">Our Github</a></li>
               <li class="sidebar-nav-item"><a href="https://www.ai-camp.org">AI Camp</a></li>
             </ul>
         </nav>
+        -->
         <!-- Header-->
-        <header class="masthead d-flex align-items-center">
+        <header class="masthead d-flex align-items-center" style="background: linear-gradient(to top, #2C5364, #203A43, #0F2027)">
             <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1 text-primary">LyricBot</h1>
-                <h2 class="mb-2 text-primary">'Algorithms and Blues' Edition</h2>
-                <h3 class="mb-5 text-light"><em>All your favorite artists. One AI.</em></h3>
-                <a class="btn btn-primary btn-xl" href={{ url_for('results')}}>Try the Model</a>
+                <h1 class="mb-1 text-primary">Genre based Story Generator</h1>
+                <h2 class="mb-2 text-primary">What is your choice of genre????</h2>
+                <h3 class="mb-5 text-light"><em>Drama/Horror/Superhero/SciFi/Thriller/Action</em></h3>
+                <a class="btn btn-primary btn-xl" href={{ url_for('results')}}>Get your story!!</a>
             </div>
         </header>
         <!-- The Project. Note: https://thesabbir.github.io/simple-line-icons/ will give you a cheat sheet for the icons available-->
@@ -48,16 +52,18 @@
                     <h2 class="mb-5">The Project</h2>
                 </div>
                 <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-music-tone-alt"></i></span>
-                        <h4><strong>Great Music Taste</strong></h4>
-                        <p class="text-faded mb-0">LyricBot is a custom trained GPT-2 model that learned from over 94000 lyrics from the best rock artists of all time.</p>
+                    <!--<div class="col-lg-3 col-md-6 mb-5 mb-lg-0">-->
+                    <div class="col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-book-open"></i></span>
+                        <h4><strong>Great stories</strong></h4>
+                        <p class="text-faded mb-0">This model is trained on over 30,000 stories of different genre and is trained with GPT-Neo</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-playlist"></i></span>
+                    <div class="col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-note"></i></span>
                         <h4><strong>Interactive</strong></h4>
-                        <p class="text-faded mb-0">LyricBot will write lyrics based off of any prompt you provide it.</p>
+                        <p class="text-faded mb-0">This project will give you stories based on your favorite genre</p>
                     </div>
+                    <!---
                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
                         <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-clock"></i></span>
                         <h4><strong>Timeline</strong></h4>
@@ -67,11 +73,12 @@
                         <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-docs"></i></span>
                         <h4><strong>Extensions</strong></h4>
                         <p class="text-faded mb-0">Some extensions to this project include deploying it to the web, building a discord bot, or having the algorithms and blues LyricBot interact with new genres!</p>
-                    </div>
+                    </div> --->
                 </div>
             </div>
         </section>
         <!-- Team-->
+        <!--
         <section class="content-section" id="aboutus">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading text-center">
@@ -153,8 +160,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Footer-->
+        <!--
         <footer class="footer text-center">
             <div class="container px-4 px-lg-5">
                 <ul class="list-inline mb-5">
@@ -170,7 +178,7 @@
                 </ul>
                 <p class="text-muted small mb-0">Copyright &copy; LyricBot AI Camp Team (mitch cutts) 2022 </p>
             </div>
-        </footer>
+        </footer> -->
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
         <!-- TEXTGEN JS-->
