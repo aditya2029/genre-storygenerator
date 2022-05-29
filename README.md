@@ -8,8 +8,8 @@ This model is deployed on cocalc server using flask.
 ### Dataset:
 
 The dataset is taken from:
-https://drive.google.com/file/d/11FgexOt7PWxFnn9TbkMaEYVEo7gkHwkl/view
-which is the created by Pranav Varedu by combining https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots and scrapping superhero comics data from Wikipedia.
+[six_genre_dataset](https://drive.google.com/file/d/11FgexOt7PWxFnn9TbkMaEYVEo7gkHwkl/view)
+which is the created by Pranav Varedu by combining [Wikipedia movie plots](https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots) and scrapping superhero comics data from Wikipedia.
 
 This dataset contains over 30,000 stories.
 
@@ -50,7 +50,7 @@ The architecture of files and directories are as follows:
 
 #### Model:
 
-In the model folder, the URL (https://drive.google.com/drive/folders/1XeHl9RHsJ7HSgfsSGBC1nsfk_Lavk18v?usp=sharing) is given from which you can download the respective files based on the genre. The file directory after this process should look like this:
+In the model folder, the URL [model weights and config files](https://drive.google.com/drive/folders/1XeHl9RHsJ7HSgfsSGBC1nsfk_Lavk18v?usp=sharing) is given from which you can download the respective files based on the genre. The file directory after this process should look like this:
 
 * app/
 	* model/
@@ -84,9 +84,11 @@ Make sure to install the dependencies of the following:
 * Flask
 * aitextgen
 * pytorch
+
 Also install the packages given is **requirements.txt** file.
 
 Then clone the repository:
+
 git clone https://github.com/aditya2029/genre-storygenerator
 
 Run the web application by:
