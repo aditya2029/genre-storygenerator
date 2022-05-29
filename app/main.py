@@ -20,11 +20,36 @@ from utils import get_base_url
 # import stuff for our models
 from aitextgen import aitextgen
 
-# load up a model from memory. Note you may not need all of these options.
-# ai = aitextgen(model_folder="model/",
-#                tokenizer_file="model/aitextgen.tokenizer.json", to_gpu=False)
+story_genre = ''
 
-ai = aitextgen(model="distilgpt2", to_gpu=False)
+
+def genre_text_generation(genre):
+    
+    if genre == 'horror':
+        file_dest = 'model/horror_files'
+        
+    if genre == 'drama':
+        file_dest = 'model/drama_files'
+        
+    if genre == 'thriller':
+        file_dest = 'model/thriller_files'
+        
+    if genre == 'scifi':
+        file_dest = 'model/scifi_files'
+        
+    if genre == 'superhero':
+        file_dest = 'model/superhero_files'
+        
+    if genre == 'action':
+        file_dest = 'model/action_files'
+        
+    return file_dest
+
+# load up a model from memory. Note you may not need all of these options.
+
+#ai = aitextgen(model_folder = 'model/action_files', to_gpu=False)
+# ai = aitextgen(model_folder="model/", tokenizer_file="model/aitextgen.tokenizer.json", to_gpu=False)
+#ai = aitextgen(model="distilgpt2", to_gpu=False)
 
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
@@ -69,13 +94,20 @@ def generate_text():
     """
 
     prompt = request.form['prompt']
+    print(prompt)
+    genre_type = request.form['genre']
+    print('genre type is: ', genre_type)
+    story_genre = genre_text_generation(genre_type)
+    print('file destination is: ', story_genre)
+    ai = aitextgen(model_folder = story_genre, to_gpu=False)
+    
     if prompt is not None:
         generated = ai.generate(
             n=1,
-            batch_size=3,
+            batch_size=10,
             prompt=str(prompt),
-            max_length=300,
-            temperature=0.9,
+            max_length=100,
+            temperature=1.0,
             return_as_list=True
         )
 
@@ -92,7 +124,7 @@ def generate_text():
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    website_url = 'coding.ai-camp.dev'
+    website_url = 'cocalc8.ai-camp.dev'
 
     print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
     app.run(host='0.0.0.0', port=port, debug=True)
