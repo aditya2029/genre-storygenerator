@@ -1,5 +1,9 @@
 # Genre based story generator
 
+![webpage_intro](https://github.com/aditya2029/genre-storygenerator/blob/main/app/static/img/front_page.jpg)
+![project_description](https://github.com/aditya2029/genre-storygenerator/blob/main/app/static/img/description_proj.jpg)
+![genre](https://github.com/aditya2029/genre-storygenerator/blob/main/app/static/img/genre_page.jpg)
+
 ### Introduction:
 
 In this project, we are generating short stories (100 words) based on the given six genre (drama, thriller, action, superhero, scifi and horror) by fine-tuning GPT-Neo model.
